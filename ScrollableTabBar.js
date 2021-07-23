@@ -26,6 +26,7 @@ const ScrollableTabBar = createReactClass({
     scrollOffset: PropTypes.number,
     style: ViewPropTypes.style,
     tabStyle: ViewPropTypes.style,
+    tabButtonStyle: ViewPropTypes.style,
     tabsContainerStyle: ViewPropTypes.style,
     textStyle: Text.propTypes.style,
     renderTab: PropTypes.func,
@@ -41,6 +42,7 @@ const ScrollableTabBar = createReactClass({
       backgroundColor: null,
       style: {},
       tabStyle: {},
+      tabButtonStyle: {},
       tabsContainerStyle: {},
       underlineStyle: {},
     };
