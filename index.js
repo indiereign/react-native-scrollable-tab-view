@@ -1,6 +1,6 @@
 const React = require('react');
-const { Component } = React;
-const { ViewPropTypes } = ReactNative = require('react-native');
+const { Component, } = React;
+const { ViewPropTypes, } = ReactNative = require('react-native');
 const createReactClass = require('create-react-class');
 const PropTypes = require('prop-types');
 const {
@@ -13,9 +13,8 @@ const {
   InteractionManager,
 } = ReactNative;
 
-const ViewPagerAndroid = require('@react-native-community/viewpager');
 const TimerMixin = require('react-timer-mixin');
-const ViewPager = require('@react-native-community/viewpager');
+import ViewPager from 'react-native-pager-view';
 
 const SceneComponent = require('./SceneComponent');
 const DefaultTabBar = require('./DefaultTabBar');
@@ -342,7 +341,7 @@ const ScrollableTabView = createReactClass({
     if (!width || width <= 0 || Math.round(width) === Math.round(this.state.containerWidth)) {
       return;
     }
-    
+
     if (Platform.OS === 'ios') {
       const containerWidthAnimatedValue = new Animated.Value(width);
       // Need to call __makeNative manually to avoid a native animated bug. See

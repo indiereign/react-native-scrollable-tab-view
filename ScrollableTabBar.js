@@ -1,5 +1,5 @@
 const React = require('react');
-const { ViewPropTypes } = ReactNative = require('react-native');
+const { ViewPropTypes, } = ReactNative = require('react-native');
 const PropTypes = require('prop-types');
 const createReactClass = require('create-react-class');
 const {
@@ -138,9 +138,9 @@ const ScrollableTabBar = createReactClass({
       accessibilityTraits='button'
       onPress={() => onPressHandler(page)}
       onLayout={onLayoutHandler}
-      style={[this.props.tabButtonStyle]}
+      style={[Platofrm.OS === 'ios' && this.props.tabButtonStyle, ]}
     >
-      <View style={[styles.tab, this.props.tabStyle, ]}>
+      <View style={[styles.tab, this.props.tabStyle, Platofrm.OS === 'android' && this.props.tabButtonStyle, ]}>
         <Text style={[{color: textColor, fontWeight, }, textStyle, ]}>
           {name}
         </Text>
