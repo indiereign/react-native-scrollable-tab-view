@@ -410,6 +410,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   scrollableContentAndroid: {
-    flex: 1,
+    height: 'auto',
   },
 });
