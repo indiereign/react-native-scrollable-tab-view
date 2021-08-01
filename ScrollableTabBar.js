@@ -157,9 +157,9 @@ const ScrollableTabBar = createReactClass({
   render() {
     const tabUnderlineStyle = {
       position: 'absolute',
-      height: 4,
+      height: 5,
       backgroundColor: 'navy',
-      bottom: 0,
+      bottom: -2.5,
     };
 
     const dynamicTabUnderline = {
@@ -178,6 +178,7 @@ const ScrollableTabBar = createReactClass({
       <ScrollView
         ref={(scrollView) => { this._scrollView = scrollView; }}
         horizontal={true}
+        style={{ overflow: 'visible', }}
         showsHorizontalScrollIndicator={false}
         showsVerticalScrollIndicator={false}
         directionalLockEnabled={true}
@@ -229,7 +230,7 @@ module.exports = ScrollableTabBar;
 
 const styles = StyleSheet.create({
   tab: {
-    height: 49,
+    height: 50,
     alignItems: 'center',
     justifyContent: 'center',
     paddingLeft: 20,
@@ -237,11 +238,8 @@ const styles = StyleSheet.create({
   },
   container: {
     height: 50,
-    borderWidth: 1,
-    borderTopWidth: 0,
-    borderLeftWidth: 0,
-    borderRightWidth: 0,
-    borderColor: '#ccc',
+    borderBottomWidth: 1,
+    borderColor: 'rgba(255,255,255,0.3)',
   },
   tabs: {
     flexDirection: 'row',
