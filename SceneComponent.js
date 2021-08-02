@@ -34,7 +34,6 @@ const SceneComponent = (Props) => {
 
   const setDimensions = (e) => {
     setLayoutWidth(e.nativeEvent.layout.width);
-    setLayoutHeight(e.nativeEvent.layout.height);
   };
 
   React.useEffect(() => {
