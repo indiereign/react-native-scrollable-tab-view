@@ -38,9 +38,11 @@ const SceneComponent = (Props) => {
     if (iPad && orientation === 'portrait')      {setLayoutWidth(deviceWidth - subtractiPadPortraitWidth);}
     if (iPad && orientation === 'landscape')      {setLayoutWidth(deviceWidth - subtractiPadLandscapeWidth);}
     if (android)      {setLayoutWidth(deviceWidth - 55);}
-  }, [layoutWidth, ]);
+  }, []);
 
-  return <View style={{
+  return <View
+  onLayout={() => {}}
+  style={{
     width: layoutWidth,
     height: 'auto',
   }}>
