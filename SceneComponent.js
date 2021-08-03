@@ -32,10 +32,6 @@ const SceneComponent = (Props) => {
     });
   }, []);
 
-  const setDimensions = (e) => {
-    setLayoutWidth(e.nativeEvent.layout.width);
-  };
-
   React.useEffect(() => {
     if (iPhone && orientation === 'portrait')      {setLayoutWidth(deviceWidth - subtractiPhonePortraitWidth);}
     if (iPhone && orientation === 'landscape')      {setLayoutWidth(deviceWidth - subtractiPhoneLandscapeWidth);}
@@ -44,11 +40,10 @@ const SceneComponent = (Props) => {
     if (android)      {setLayoutWidth(deviceWidth - 55);}
   }, [layoutWidth, ]);
 
-  return <View onLayout={setDimensions}
-               style={{
-                 width: layoutWidth,
-                 height: 'auto',
-               }}>
+  return <View style={{
+    width: layoutWidth,
+    height: 'auto',
+  }}>
         {props.children}
   </View>;
 };
