@@ -30,7 +30,7 @@ const SceneComponent = (Props) => {
     ReactNative.Dimensions.addEventListener('change', () => {
       setOrientation(Orientation.isPortrait() ? 'portrait' : 'landscape');
     });
-  }, []);
+  });
 
   React.useEffect(() => {
     if (iPhone && orientation === 'portrait')      {setLayoutWidth(deviceWidth - subtractiPhonePortraitWidth);}
@@ -38,7 +38,7 @@ const SceneComponent = (Props) => {
     if (iPad && orientation === 'portrait')      {setLayoutWidth(deviceWidth - subtractiPadPortraitWidth);}
     if (iPad && orientation === 'landscape')      {setLayoutWidth(deviceWidth - subtractiPadLandscapeWidth);}
     if (android)      {setLayoutWidth(deviceWidth - 55);}
-  }, []);
+  });
 
   return <View
   onLayout={() => {}}
