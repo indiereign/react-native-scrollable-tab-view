@@ -5,10 +5,10 @@ const { View, StyleSheet, } = ReactNative;
 import Orientation from './components/Orientation';
 
 const subtractiPhonePortraitWidth = 54;
-const subtractiPhoneLandscapeWidth = 373;
+const subtractiPhoneLandscapeWidth = 54;
 
-const subtractiPadPortraitWidth = 328;
-const subtractiPadLandscapeWidth = 328;
+const subtractiPadPortraitWidth = 54;
+const subtractiPadLandscapeWidth = 54;
 
 const iPhone = ReactNative.Platform.OS === 'ios';
 const android = ReactNative.Platform.OS === 'android';
