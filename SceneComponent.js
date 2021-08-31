@@ -5,7 +5,7 @@ const { View, StyleSheet, } = ReactNative;
 import Orientation from './components/Orientation';
 
 const subtractiPhonePortraitWidth = 54;
-const subtractiPhoneLandscapeWidth = 54;
+const subtractiPhoneLandscapeWidth = 148;
 
 const subtractiPadPortraitWidth = 54;
 const subtractiPadLandscapeWidth = 54;
